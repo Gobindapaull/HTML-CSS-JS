@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      button {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin: 20px;
+        cursor: pointer;
+      }
+    </style>
+    <title>buy and sell</title>
+  </head>
+  <body>
+    <button id="buy">buy</button>
+    <button id="sell">sell</button>
+
+    <script>
+      const buy = document.getElementById("buy");
+      const sell = document.getElementById("sell");
+
+      buy.addEventListener("click", () => {
+        console.log("you bought");
+      });
+
+      sell.addEventListener("click", () => {
+        console.log("you sold");
+      });
+    </script>
+  </body>
+</html>
