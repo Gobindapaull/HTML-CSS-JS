@@ -1,0 +1,26 @@
+.container {
+    display: inline-block;
+    background-color: black;
+    border-radius: 5px;
+    padding: 0px 150px;
+}
+.text {
+    font-size: 4rem;
+    color:cornflowerblue;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 4px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(15),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+@keyframes typing {
+    from { width: 0;}
+}
