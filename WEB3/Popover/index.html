@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popover Wallet UI</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+/* main button */
+.connect-btn{
+    padding:14px 28px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#6366f1;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.connect-btn:hover{
+    background:#4f46e5;
+}
+
+/* popover card */
+[popover]{
+    border:none;
+    border-radius:14px;
+    padding:30px;
+    width:260px;
+    background:white;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.25);
+}
+
+/* popover title */
+.pop-title{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+/* action buttons */
+.action-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#10b981;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.action-btn:hover{
+    background:#059669;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<button class="connect-btn" popovertarget="connect-pop">
+Connect Wallet
+</button>
+
+
+<div id="connect-pop" popover>
+    <div class="pop-title">Wallet Connected</div>
+    <button class="action-btn" popovertarget="sign-pop">Sign</button>
+</div>
+
+
+<div id="sign-pop" popover>
+    <div class="pop-title">Transaction Signed</div>
+    <button class="action-btn" popovertarget="transfer-pop">Transfer</button>
+</div>
+
+
+<div id="transfer-pop" popover>
+    <div class="pop-title">Transfer Complete 🎉</div>
+</div>
+
+</body>
+</html>
